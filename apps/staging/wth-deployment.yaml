@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: wthmsft
+  name: wthmsft
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wthmsft
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: wthmsft
+    spec:
+      containers:
+      - image: whatthehackmsft/content-web:v1
+        name: content-web
+        resources: {}
+status: {}
